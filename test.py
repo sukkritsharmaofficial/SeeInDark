@@ -9,6 +9,7 @@ import torch.nn as nn
 import torch.optim as optim
 
 from model import SeeInDark
+from toimage import toimage
 
 input_dir = './dataset/Sony/short/'
 gt_dir = './dataset/Sony/long/'
@@ -88,9 +89,9 @@ for test_id in test_ids:
         origin_full = scale_full
         scale_full = scale_full*np.mean(gt_full)/np.mean(scale_full) # scale the low-light image to the same mean of the groundtruth
         
-        scipy.misc.toimage(origin_full*255,  high=255, low=0, cmin=0, cmax=255).save(result_dir + '%5d_00_%d_ori.png'%(test_id,ratio))
-        scipy.misc.toimage(output*255,  high=255, low=0, cmin=0, cmax=255).save(result_dir + '%5d_00_%d_out.png'%(test_id,ratio))
-        scipy.misc.toimage(scale_full*255,  high=255, low=0, cmin=0, cmax=255).save(result_dir + '%5d_00_%d_scale.png'%(test_id,ratio))
-        scipy.misc.toimage(gt_full*255,  high=255, low=0, cmin=0, cmax=255).save(result_dir + '%5d_00_%d_gt.png'%(test_id,ratio))
+        toimage(origin_full*255,  high=255, low=0, cmin=0, cmax=255).save(result_dir + '%5d_00_%d_ori.png'%(test_id,ratio))
+        toimage(output*255,  high=255, low=0, cmin=0, cmax=255).save(result_dir + '%5d_00_%d_out.png'%(test_id,ratio))
+        toimage(scale_full*255,  high=255, low=0, cmin=0, cmax=255).save(result_dir + '%5d_00_%d_scale.png'%(test_id,ratio))
+        toimage(gt_full*255,  high=255, low=0, cmin=0, cmax=255).save(result_dir + '%5d_00_%d_gt.png'%(test_id,ratio))
 
 
