@@ -31,9 +31,8 @@ pip install scipy
 ```python
 python train.py
 ```
-
 - It will save model and generate result images every 100 epochs. 
-- The trained models will be saved in `saved_model/` and the result images will be saved in `result_Sony/`.
+- The trained models will be saved in `saved_model/` and the result images will be saved in `test_result_Sony/`.
 - The result of the current output is displayed on the right side of the image file with the ground truth counter part shown on the left side.
 
 ## Testing
