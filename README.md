@@ -1,6 +1,6 @@
 <h1 align="center"><b> SeeInDark 🔆✨ </b></h1>
 
-<h2><b>Learning to See in the Dark using pytorch</b></h2>
+<h2><b>Learning to See in the Dark using pytorch :fire: </b></h2>
 <br></br>
 <p align="center"><img width=75% src="assets/output1.jpg"></p>
 <p align="center"><img width=75% src="assets/output2.jpg"></p>
